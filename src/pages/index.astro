@@ -1,0 +1,268 @@
+---
+import ThemeToggle from "../components/ThemeToggle.astro";
+import ChevronUp from "../icons/ChevronUp.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+    @keyframes pulse {
+        0% {
+            transform: rotate(-90deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    .clock {
+        animation: pulse 60s linear forwards;
+    }
+
+    .minute {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 150px;
+        width: 1px;
+        height: 150px;
+        transform-origin: bottom center;
+        font-size: 0.91rem;
+    }
+
+    .minute-1 {
+        transform: rotate(0deg);
+    }
+
+    .minute-2 {
+        transform: rotate(30deg);
+    }
+
+    .minute-3 {
+        transform: rotate(60deg);
+    }
+
+    .minute-4 {
+        transform: rotate(90deg);
+    }
+
+    .minute-5 {
+        transform: rotate(120deg);
+    }
+
+    .minute-6 {
+        transform: rotate(150deg);
+    }
+
+    .minute-7 {
+        transform: rotate(180deg);
+    }
+
+    .minute-8 {
+        transform: rotate(210deg);
+    }
+
+    .minute-9 {
+        transform: rotate(240deg);
+    }
+
+    .minute-10 {
+        transform: rotate(270deg);
+    }
+
+    .minute-11 {
+        transform: rotate(300deg);
+    }
+
+    .minute-12 {
+        transform: rotate(330deg);
+    }
+</style>
+<Layout title="TimeBox">
+    <nav class="flex items-center justify-between w-full py-6">
+        <div
+            class="font-bold flex items-center gap-1 text-sm text-black dark:text-[#fefefe]"
+        >
+            <span class="w-5 h-5 rounded-full bg-red-500"></span>
+            TimeBox
+        </div>
+        <ThemeToggle />
+    </nav>
+    <main
+        class="flex gap-16 mx-auto rounded-xl bg-transparent h-[85vh] items-center"
+    >
+        <div class="flex gap-14 h-fit w-full">
+            <article
+                class="flex flex-col items-center justify-center text-center min-h-[400px] gap-8"
+            >
+                <div>
+                    <span class="font-bold text-gray-500 dark:text-[#999]"
+                        >WORK 1/1</span
+                    >
+                    <h1
+                        class="text-[1.8rem] font-bold text-black dark:text-white -mt-1"
+                    >
+                        25 MINUTES
+                    </h1>
+                </div>
+                <div class="text-black rotate-180 dark:text-white">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        viewBox="0 0 256 256"
+                        ><path
+                            d="M236.78,211.81A24.34,24.34,0,0,1,215.45,224H40.55a24.34,24.34,0,0,1-21.33-12.19,23.51,23.51,0,0,1,0-23.72L106.65,36.22a24.76,24.76,0,0,1,42.7,0L236.8,188.09A23.51,23.51,0,0,1,236.78,211.81Z"
+                        ></path></svg
+                    >
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center relative gap-2"
+                >
+                    <div
+                        class="clock h-[300px] w-[300px] rounded-full flex items-center justify-center text-black dark:text-white"
+                    >
+                        <span class="minute minute-1"
+                            >0
+                            <div>|</div>
+                        </span>
+                        <span class="minute minute-2"
+                            >5
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-3"
+                            >10
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-4"
+                            >15
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-5"
+                            >20
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-6"
+                            >25
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-7"
+                            >30
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-8"
+                            >35
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-9"
+                            >40
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-10"
+                            >45
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-11"
+                            >50
+                            <div>|</div></span
+                        >
+                        <span class="minute minute-12"
+                            >55
+                            <div>|</div></span
+                        >
+                    </div>
+                    <button
+                        class="bg-red-500 h-12 w-12 rounded-full absolute text-white flex justify-center items-center"
+                    >
+                        <svg
+                            class="pr-[2px]"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            viewBox="0 0 256 256"
+                        >
+                            <path
+                                d="M240,128a15.74,15.74,0,0,1-7.6,13.51L88.32,229.65a16,16,0,0,1-16.2.3A15.86,15.86,0,0,1,64,216.13V39.87a15.86,15.86,0,0,1,8.12-13.82,16,16,0,0,1,16.2.3L232.4,114.49A15.74,15.74,0,0,1,240,128Z"
+                            >
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+            <span
+                class="h-72 w-[1px] my-auto border-gray-200 dark:border-[#444] border-dashed border-[1px]"
+            ></span>
+            <article class="flex flex-col gap-6 mb-8 w-full dark:text-white">
+                <div class="flex justify-between">
+                    <h2 class="font-bold text-black dark:text-white">CONFIGURATION</h2>
+                    <button
+                        class="text-black h-6 w-6 flex items-center justify-center rounded-md"
+                    >
+                        <ChevronUp size={20} />
+                    </button>
+                </div>
+                <div class="flex flex-col">
+                    <strong>Work time</strong>
+                    <div
+                        class="flex items-center justify-between text-sm text-[#666]"
+                    >
+                        <label for="">Pomodoro work time in minutes</label>
+                        <input class="w-10" type="number" placeholder="25" />
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <strong>Break time</strong>
+                    <div
+                        class="flex items-center justify-between text-sm text-[#666] text-[0.91rem]"
+                    >
+                        <label for="">Pomodoro work time in minutes</label>
+                        <input class="w-10" type="number" placeholder="25" />
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <strong>Long Break time</strong>
+                    <div
+                        class="flex items-center justify-between text-sm text-[#666] text-[0.91rem]"
+                    >
+                        <label for="">Pomodoro work time in minutes</label>
+                        <input class="w-10" type="number" placeholder="25" />
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <strong>Repeat</strong>
+                    <div
+                        class="flex items-center justify-between text-sm text-[#666] text-[0.91rem]"
+                    >
+                        <label for="">Pomodoro work time in minutes</label>
+                        <input class="w-10" type="number" placeholder="25" />
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <strong>Notifications</strong>
+                    <div
+                        class="flex items-center justify-between text-sm text-[#666] text-[0.91rem]"
+                    >
+                        <label for="">Pomodoro work time in minutes</label>
+                        <ThemeToggle />
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div
+                        class="flex items-center justify-between text-sm text-[#666] text-[0.91rem]"
+                    >
+                        <label for="">Notification sound</label>
+                        <select>
+                            <option value="">None</option>
+                            <option value="">Bell</option>
+                            <option value="">Twinkle</option>
+                            <option value="">Bubbles</option>
+                        </select>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+</Layout>
