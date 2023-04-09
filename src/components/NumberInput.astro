@@ -1,0 +1,14 @@
+---
+import Minus from "../icons/Minus.astro";
+import Plus from "../icons/Plus.astro";
+---
+
+<div class="flex items-center bg-white p-1 rounded-md text-black">
+    <button class="flex justify-center items-center px-1">
+        <Minus size={14} strokeWidth={2.2} />
+    </button>
+    <input type="text" placeholder="0" value="5" class="w-10 text-center" />
+    <button class="flex justify-center items-center px-1">
+        <Plus size={14} strokeWidth={2.2} />
+    </button>
+</div>
